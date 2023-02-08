@@ -1,6 +1,7 @@
 div{
     text-align: center;
     text-indent: 5px;
+    color: crimson;
 }
 p{
     text-align: center;
@@ -8,4 +9,10 @@ p{
 button{
    margin-left: 700px;
    margin-top: 15px;
+   color: rgb(53, 2, 22);
+   background-color: rgb(229, 234, 239);
+   border-color: rgb(93, 93, 214);
+   border-radius: 5px;
+   text-shadow: 1cm;
+   box-shadow: inset;
 }
