@@ -1,0 +1,17 @@
+#reset{
+    border-radius: 5px;
+    font-size: large;
+    text-decoration: solid;
+   float: left;
+   margin-left: 538px;
+   margin-top: 10px;
+   padding: 5px;
+   color: red;
+   
+}
+#input{
+    width: 300px;
+    height: 100;
+    margin-left: 5px;
+    
+}
