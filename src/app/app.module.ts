@@ -8,6 +8,8 @@ import { Test1Component } from './test1/test1.component';
 import { Test2Component } from './test2/test2.component';
 import { FormsModule } from '@angular/forms';
 import { NewPassGeneratorComponent } from './new-pass-generator/new-pass-generator.component';
+import { NgForComponent } from './ng-for/ng-for.component';
+import { CountryDropListComponent } from './country-drop-list/country-drop-list.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +18,9 @@ import { NewPassGeneratorComponent } from './new-pass-generator/new-pass-generat
     Test1Component,
     Test2Component,
     NewPassGeneratorComponent,
+    NgForComponent,
+    CountryDropListComponent,
+    
     
     
   ],

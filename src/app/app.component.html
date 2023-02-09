@@ -1,8 +1,8 @@
-<app-new-pass-generator id="passComp"></app-new-pass-generator>
+<!-- <app-new-pass-generator id="passComp"></app-new-pass-generator>
+<app-ng-for></app-ng-for> -->
 
-
-
-
+<app-test2 (objFromChild)="onParent($event)"> </app-test2>
+<!-- [child]="parentToChild" (objFromChild)="onParent($event)" -->
 <!-- <div style="text-align: center">
   <h1>Welcome to {{ title }}! {{ name }}</h1>
   <h1>No of employees= {{ empCount }}</h1>
@@ -21,6 +21,7 @@
 
 <br />
 
-<img [src]="imageUrl" alt="" id="img" />
+<img [src]="imageUrl" alt="" id="img" /> -->
 
-<router-outlet></router-outlet><br /> -->
+<router-outlet></router-outlet>
+<app-country-drop-list></app-country-drop-list>

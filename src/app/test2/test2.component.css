@@ -1,0 +1,11 @@
+#click{
+    text-align: center;
+    margin: auto;
+    margin-top: 20px;
+    display: flex;
+}
+div{
+    color: indianred;
+    margin-left: 600px;
+    margin-top: 10px;
+}

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Employee } from './models/employee';
 
 @Component({
   selector: 'app-root',
@@ -6,7 +7,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
- 
+  display = [];
+  sendToParent(receivedData : string | number){
+    console.log(`received Data:`,receivedData);
+    this.display.push(receivedData);
+    console.log(this.display);
+  }  
   title = 'angularapp';
   name  = 'Chandrashekhar'
   imageUrl = 'https://img.freepik.com/free-photo/wide-angle-shot-single-tree-growing-clouded-sky-during-sunset-surrounded-by-grass_181624-22807.jpg';
@@ -25,10 +31,15 @@ export class AppComponent {
   currentTime() :any {
     let date= Date()
   return date
-
-
   }
-  
+  testNew(){
+    alert(`Event Raised`);
+  }
+  onParent(val:Employee){
+    console.log('From child to parent emp', val);
+    
+  }
+
 }
 
 
