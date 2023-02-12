@@ -1,17 +1,16 @@
-<h1 > Dropdown List of Country and its States</h1>
-<br>
+<h1>Dropdown List of Country and its States</h1>
+<br />
 <div>
-   
-    <label><b>Select Country:</b></label>
-<select #tempRefVer (change)="setState(tempRefVer.value)">
+  <label><b>Select Country:</b></label>
+  <select #tempRefVer (change)="setState(tempRefVer.value)">
     <option>Select Country</option>
-    <option *ngFor="let country of countries">{{country}}</option>
-</select>
-<br>
-<br>
-<label><b>Select State:</b></label>
-<select>
+    <option *ngFor="let country of countries">{{ country }}</option>
+  </select>
+  <br />
+  <br />
+  <label><b>Select State:</b></label>
+  <select>
     <option>Select State</option>
-    <option *ngFor="let state of states">{{state}}</option>
-</select>
+    <option *ngFor="let state of states">{{ state }}</option>
+  </select>
 </div>

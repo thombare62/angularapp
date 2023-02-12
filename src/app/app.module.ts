@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { NewPassGeneratorComponent } from './new-pass-generator/new-pass-generator.component';
 import { NgForComponent } from './ng-for/ng-for.component';
 import { CountryDropListComponent } from './country-drop-list/country-drop-list.component';
+import { NgIfComponent } from './ng-if/ng-if.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { CountryDropListComponent } from './country-drop-list/country-drop-list.
     NewPassGeneratorComponent,
     NgForComponent,
     CountryDropListComponent,
+    NgIfComponent,
     
     
     
