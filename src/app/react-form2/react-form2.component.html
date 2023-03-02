@@ -1,0 +1,268 @@
+<div id="page">
+  <div id="form">
+    <form [formGroup]="reactiveForm" (ngSubmit)="onSubmit()">
+      <table>
+        <tr>
+          <td>
+            <div id="photo">
+              <img
+                src="https://img.freepik.com/free-vector/hand-drawn-web-developers_23-2148819604.jpg?w=2000"
+                width="200px"
+                height="200px"
+                alt="Develper Img"
+              />
+              <p>{{ reactiveForm.get("userDetails.fullName").value }}</p>
+              <p>{{ reactiveForm.get("userDetails.bio").value }}</p>
+            </div>
+          </td>
+
+          <div id=" userDetails ">
+            <td>
+              <div formGroupName="userDetails">
+                <h4 style="margin-top: 30px">User Details</h4>
+
+                <div class="form-group">
+                  <label for="fullName">Full Name*</label>
+                  <input
+                    formControlName="fullName"
+                    id="fullName"
+                    type="text"
+                    class="form-control"
+                  />
+                  <mat-error
+                    *ngIf="
+                      !reactiveForm.get('userDetails.fullName').valid &&
+                      reactiveForm.get('userDetails.fullName').touched
+                    "
+                  >
+                    Please enter full name
+                  </mat-error>
+                </div>
+
+                <div class="form-group">
+                  <label for="yourBirthday">Your Birthday*</label>
+                  <input
+                    [(ngModel)]="formattedDate"
+                    formControlName="yourBirthday"
+                    type="date"
+                    id="yourBirthday"
+                    class="form-control"
+                  />
+
+                  <mat-error
+                    *ngIf="
+                      !reactiveForm.get('userDetails.yourBirthday').valid &&
+                      reactiveForm.get('userDetails.yourBirthday').touched
+                    "
+                    ><b></b>Please enter your birth date</mat-error
+                  >
+                </div>
+
+                <div class="form-group">
+                  <label for="gender">Gender*</label>
+                  <select
+                    formControlName="gender"
+                    id="gender"
+                    class="form-control"
+                  >
+                    <option>Male</option>
+                    <option>Female</option>
+                    <option>Other</option>
+                  </select>
+
+                  <mat-error
+                    *ngIf="
+                      !reactiveForm.get('userDetails.gender').valid &&
+                      reactiveForm.get('userDetails.gender').touched
+                    "
+                    ><b></b>Select Gender</mat-error
+                  >
+                </div>
+                <div class="form-group">
+                  <tr>
+                    <td>
+                      <label for="country">Country</label>
+                      <select
+                        formControlName="country"
+                        id="country"
+                        class="form-control"
+                      >
+                        <option>India</option>
+                        <option>US</option>
+                        <option>China</option>
+                      </select>
+
+                      <mat-error
+                        *ngIf="
+                          !reactiveForm.get('userDetails.country').valid &&
+                          reactiveForm.get('userDetails.country').touched
+                        "
+                        ><b></b>Select Country</mat-error
+                      >
+                    </td>
+                    <td>
+                      <label for="phone">Phone</label>
+                      <input
+                        formControlName="phone"
+                        type="tel"
+                        id="phone"
+                        class="form-control"
+                        (change)="onChange()"
+                      />
+                      <mat-error
+                        *ngIf="
+                          !reactiveForm.get('userDetails.phone').valid &&
+                          reactiveForm.get('userDetails.phone').touched
+                        "
+                        ><b></b>Enter phone number</mat-error
+                      >
+                    </td>
+                  </tr>
+                </div>
+                <div class="form-group">
+                  <label>Bio</label><br />
+                  <textarea
+                    rows="4"
+                    cols="30"
+                    formControlName="bio"
+                    type="text"
+                    id="bio"
+                    class="form-control"
+                  ></textarea
+                  ><br />
+                  <mat-hint style="text-align: left"
+                    >Tell us about yourself</mat-hint
+                  >
+                  <mat-hint style="text-align: end"
+                    >{{
+                      reactiveForm.get("userDetails.bio").value.length
+                    }}/256</mat-hint
+                  >
+                </div>
+              </div>
+            </td>
+          </div>
+
+          <td>
+            <div formGroupName="accountDetails">
+              <div>
+                <h4>Account Details</h4>
+                <div class="form-group" id=" account ">
+                  <label for="username">Username</label>
+                  <input
+                    formControlName="username"
+                    id="username"
+                    class="form-control"
+                  />
+                </div>
+
+                <small
+                  class="text-danger"
+                  *ngIf="
+                    !reactiveForm.get('accountDetails.username').valid &&
+                    reactiveForm.get('accountDetails.username').touched
+                  "
+                >
+                  <span
+                    class="text-danger"
+                    *ngIf="
+                      reactiveForm.get('accountDetails.username').errors[
+                        'required'
+                      ]
+                    "
+                  >
+                    Username must be 5 char long & contain numbers and letters
+                  </span>
+                  <span
+                    class="text-danger"
+                    *ngIf="
+                      reactiveForm.get('accountDetails.username').errors[
+                        'pattern'
+                      ]
+                    "
+                  >
+                    {{
+                      reactiveForm.get("accountDetails.username").value
+                    }}
+                    Pattern does not match
+                  </span>
+                </small>
+                <br />
+                <label>Enter your email</label><br />
+                <input
+                  formControlName="email"
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  placeholder="xyz@gmail.com"
+                />
+                <mat-error
+                  *ngIf="
+                    !reactiveForm.get('accountDetails.email').valid &&
+                    reactiveForm.get('accountDetails.email').touched
+                  "
+                  >Please enter your email</mat-error
+                >
+
+                <br />
+                <label for="password">Password</label>
+                <input
+                  formControlName="password"
+                  id="password"
+                  type="password"
+                  class="form-control"
+                />
+
+                <mat-error
+                  *ngIf="
+                    !reactiveForm.get('accountDetails.password').valid &&
+                    reactiveForm.get('accountDetails.password').touched
+                  "
+                >
+                  Please Enter Password and password must be at least 5
+                  characters long with one uppercase, one lowercase and one
+                  number</mat-error
+                >
+
+                <br />
+
+                <label for="confirmPassword">Confirm Password</label>
+                <br />
+                <input
+                  formControlName="confirmPassword"
+                  id="confirmPassword"
+                  type="password"
+                  class="form-control"
+                />
+
+                <mat-error
+                  *ngIf="
+                    !reactiveForm.get('accountDetails.confirmPassword').valid &&
+                    reactiveForm.get('accountDetails.confirmPassword').touched
+                  "
+                  ><b></b>Please Confirm Password</mat-error
+                >
+
+                <br />
+
+                <input type="checkbox" id="checkbox" /><label for="checkbox"
+                  >&nbsp;&nbsp;I accept terms and condition</label
+                >
+                <br />
+
+                <button
+                  type="submit"
+                  (click)="onClick()"
+                  mat-raised-button
+                  color="accent"
+                >
+                  Submit
+                </button>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </table>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,31 @@
+#form{
+    margin-left: 260px;
+    margin-top: 20px;
+   
+}
+#photo{
+    margin-right: 50px;
+    margin-left: 10px;
+    
+}
+img{
+    border-radius: 20px;
+}
+table{
+background-color: rgb(218, 218, 220);
+border-radius: 10px;
+width: 1000px;
+padding-top: 20px;
+
+
+}
+#page{
+        background-image: url('https://i.ytimg.com/vi/uNCr7NdOJgw/maxresdefault.jpg');
+        background-size: cover;
+       padding-top: 20px;
+       padding-bottom: 150px;
+    
+      
+      
+}
+

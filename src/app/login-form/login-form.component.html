@@ -1,0 +1,46 @@
+<mat-card class="login-page">
+<mat-card-title>
+    Login (Template-Driven) 
+</mat-card-title>
+<mat-card-content>
+<form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
+    <mat-form-field>
+      <input matInput placeholder="Email" name="email" [(ngModel)]="email" required email class="input">
+      <div *ngIf="!validDomain">
+        <p style="color: red;">Please enter a valid domain email</p>
+      </div> 
+    </mat-form-field>
+    
+    <mat-form-field>
+      <input matInput placeholder="Password" name="password" [(ngModel)]="password" required class="input">
+    </mat-form-field>
+    
+    <mat-form-field>
+     
+      <mat-select name="keyword" [(ngModel)]="keyword">
+        <mat-option value="angular">Angular</mat-option>
+        <mat-option value="javascript">JavaScript</mat-option>
+        <mat-option value="html">HTML</mat-option>
+      </mat-select>
+    </mat-form-field>
+    
+    <div>
+      <mat-radio-group name="gender" [(ngModel)]="gender">
+        <mat-radio-button value="male">Male</mat-radio-button>
+        <mat-radio-button value="female">Female</mat-radio-button>
+      </mat-radio-group>
+    </div>
+    
+    <button mat-raised-button color="primary" type="submit">Login</button>
+  </form>
+</mat-card-content>
+</mat-card>
+  <div *ngIf="submitted">
+    <p>Email: {{ email }}</p>
+    <p>Password: {{ password }}</p>
+    <p>Keyword: {{ keyword }}</p>
+    <p>Gender: {{ gender }}</p>
+  </div>
+  
+
+  

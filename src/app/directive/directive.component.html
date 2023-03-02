@@ -1,0 +1,35 @@
+<p class="h2" style="text-align: center;">Directives</p>
+
+<div class="card text-white bg-success mb-3" style="text-align: center;" >
+  <div class="card-header">
+    <button type="button" class="btn btn-dark" (click)="onButtonClick()">
+      {{ show ? "Hide Details" : "Display Details" }}
+    </button>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title" *ngIf="show">Paragraph</h5>
+    <p class="card-text" *ngIf="show">
+      This is an example paragraph. Operates on Button. A paragraph is a
+      self-contained unit of discourse in writing dealing with a particular
+      point or idea. Though not required by the orthographic conventions of any
+      language with a writing system, paragraphs are a conventional means of
+      organizing extended segments of prose.
+    </p>
+  </div>
+</div>
+
+<div class="card bg-light mb-3" style="max-width: 18rem">
+  <div class="card-header" >
+    <b>Button Click Count : {{ countOfClick }}</b>
+  </div>
+</div>
+<div *ngFor="let count of countArray">
+  <div [ngStyle]="{ 'background-color': count >= 5 ? 'blue' : 'white' }">
+    <div [ngClass]="{ 'text-primary': count >= 5 }">
+      Click Count : {{ count }} Date : {{ displayDate }} Time :
+      {{ displayTime }}
+      <br />
+    </div>
+  </div>
+</div>
+<br /><br />

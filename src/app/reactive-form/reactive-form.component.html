@@ -1,0 +1,82 @@
+<div></div>
+<br />
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-6 text-left rounded shadow py-5">
+      <h1 style="text-align: center">Login Form (Reactive Type)</h1>
+      <form [formGroup]="myReactiveForm" (ngSubmit)="OnSubmit()">
+        <div class="form-group">
+          <label for="email"> Email </label>
+          <input
+            formControlName="email"
+            type="email"
+            class="form-control"
+            id="email"
+            placeholder="Enter Email ID"
+          />
+          <small
+            *ngIf="
+              !myReactiveForm.get('email').valid &&
+              myReactiveForm.get('email').touched
+            "
+          >
+            Field should not be empty and should be an email address)
+          </small>
+        </div>
+
+        <div class="form-group">
+          <label for="subscriptions"> Select Subscription </label>
+          <select
+            formControlName="subscriptions"
+            id="subscription"
+            class="form-control"
+          >
+            <option value="Basic">Basic</option>
+            <option value="Advanced">Advanced</option>
+            <option value="Pro">Pro</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="password"> Password </label>
+          <input
+            formControlName="password"
+            type="password"
+            class="form-control"
+            id="password"
+            placeholder="Enter password"
+          />
+          <small
+            *ngIf="
+              !myReactiveForm.get('password').valid &&
+              myReactiveForm.get('password').touched
+            "
+          >
+            Password field should not be empty</small
+          >
+        </div>
+
+        <div class="form-group">
+          <label for="date"> Select Date </label>
+          <input
+            formControlName="date"
+            type="date"
+            class="form-control"
+            id="date"
+            placeholder="Enter date"
+            min="{{ today | date : 'yyyy-MM-dd' }}"
+          />
+        </div>
+
+        <button type="submit" class="btn btn-success" id="submit">Click To Login</button>
+      </form>
+    </div>
+  </div>
+</div>
+<div *ngIf="submitted && formData" id="formAfter">
+  <h2>Form Data Filled By User</h2>
+  <p>Email: {{ formData.email }}</p>
+  <p>Subscription: {{ formData.subscriptions }}</p>
+  <p>Password: {{ formData.password }}</p>
+  <p>Date: {{ formData.date }}</p>
+</div>
