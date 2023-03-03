@@ -18,6 +18,8 @@ import { LoginFormComponent } from './login-form/login-form.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { TemplateRegistrationFormComponent } from './template-registration-form/template-registration-form.component';
 import { ReactForm2Component } from './react-form2/react-form2.component';
+import { ServiceAssignmentComponent } from './service-assignment/service-assignment.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -36,6 +38,7 @@ import { ReactForm2Component } from './react-form2/react-form2.component';
     ReactiveFormComponent,
     TemplateRegistrationFormComponent,
     ReactForm2Component,
+    ServiceAssignmentComponent,
     
     
     
@@ -59,7 +62,7 @@ import { ReactForm2Component } from './react-form2/react-form2.component';
     MatIconModule, 
     MatButtonToggleModule,
     MatGridListModule,
-    
+    HttpClientModule,
     
     
     
