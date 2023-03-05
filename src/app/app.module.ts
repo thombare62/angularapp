@@ -20,6 +20,10 @@ import { TemplateRegistrationFormComponent } from './template-registration-form/
 import { ReactForm2Component } from './react-form2/react-form2.component';
 import { ServiceAssignmentComponent } from './service-assignment/service-assignment.component';
 import { HttpClientModule } from '@angular/common/http';
+import { PipeExampleComponent } from './pipe-example/pipe-example.component';
+import { CustomPipe } from './custom.pipe';
+import { SearchPipe } from './search.pipe';
+import { ProductFilterComponent } from './product-filter/product-filter.component';
 
 
 @NgModule({
@@ -39,6 +43,10 @@ import { HttpClientModule } from '@angular/common/http';
     TemplateRegistrationFormComponent,
     ReactForm2Component,
     ServiceAssignmentComponent,
+    PipeExampleComponent,
+    CustomPipe,
+    SearchPipe,
+    ProductFilterComponent,
     
     
     

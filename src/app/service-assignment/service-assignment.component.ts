@@ -7,8 +7,10 @@ import { MyService } from "../myService/myservice.service";
   styleUrls: ["./service-assignment.component.css"],
 })
 export class ServiceAssignmentComponent implements OnInit {
+  namesearch: string = '';
   users;
   products = {};
+  
   constructor(private myservice: MyService, private demoService: MyService) {}
 
   ngOnInit() {
