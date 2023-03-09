@@ -24,6 +24,23 @@ import { PipeExampleComponent } from './pipe-example/pipe-example.component';
 import { CustomPipe } from './custom.pipe';
 import { SearchPipe } from './search.pipe';
 import { ProductFilterComponent } from './product-filter/product-filter.component';
+import { Comp1Component } from './comp1/comp1.component';
+import { Comp2Component } from './comp2/comp2.component';
+import { Comp3Component } from './comp3/comp3.component';
+import { Comp4Component } from './comp4/comp4.component';
+import { AboutusComponent } from './aboutus/aboutus.component';
+import { ContactusComponent } from './contactus/contactus.component';
+import { ProductComponent } from './product/product.component';
+import { LaptopComponent } from './product/laptop/laptop.component';
+import { MobileComponent } from './product/mobile/mobile.component';
+import { CameraComponent } from './product/camera/camera.component';
+import { WatchComponent } from './product/watch/watch.component';
+import { DemopostComponent } from './demopost/demopost.component';
+import { DemopostdetailsComponent } from './demopostdetails/demopostdetails.component';
+import { Routingassign1Component } from './routingassign1/routingassign1.component';
+import { Routingassign2Component } from './routingassign2/routingassign2.component';
+import { HomeComponent } from './home/home.component';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 
 
 @NgModule({
@@ -47,6 +64,23 @@ import { ProductFilterComponent } from './product-filter/product-filter.componen
     CustomPipe,
     SearchPipe,
     ProductFilterComponent,
+    Comp1Component,
+    Comp2Component,
+    Comp3Component,
+    Comp4Component,
+    AboutusComponent,
+    ContactusComponent,
+    ProductComponent,
+    LaptopComponent,
+    MobileComponent,
+    CameraComponent,
+    WatchComponent,
+    DemopostComponent,
+    DemopostdetailsComponent,
+    Routingassign1Component,
+    Routingassign2Component,
+    HomeComponent,
+    PagenotfoundComponent,
     
     
     
