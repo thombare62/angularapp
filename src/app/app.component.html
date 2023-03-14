@@ -53,16 +53,107 @@
 <app-contactus></app-contactus> -->
 
 <!-- <app-product></app-product> -->
-<!-- <header>
+
+<header>
   <nav>
     <ul class="nav nav-tabs">
-      <li class="nav-item"><a routerLinkActive="active" routerLink="/home" class="nav-link">Home</a></li>
-      <li class="nav-item"><a routerLinkActive="active" routerLink="/aboutus" class="nav-link">About Us</a></li>
-      <li class="nav-item"><a routerLinkActive="active" routerLink="/contactus" class="nav-link">Contact Us</a></li>
-      <li class="nav-item"><a routerLinkActive="active" routerLink="/product" class="nav-link">Product</a></li>
-      <li class="nav-item"><a routerLinkActive="active" routerLink="/post" class="nav-link">DemoPost</a></li>
-      <li class="nav-item"><a routerLinkActive="active" routerLink="/user" class="nav-link">User</a></li>
+      <li class="nav-item">
+        <a routerLinkActive="active" routerLink="/home" class="nav-link"
+          >Home</a
+        >
+      </li>
+      <li class="nav-item">
+        <a routerLinkActive="active" routerLink="/aboutus" class="nav-link"
+          >About Us</a
+        >
+      </li>
+      <li class="nav-item">
+        <a routerLinkActive="active" routerLink="/contactus" class="nav-link"
+          >Contact Us</a
+        >
+      </li>
+      <li class="nav-item">
+        <a routerLinkActive="active" routerLink="/product" class="nav-link"
+          >Product</a
+        >
+      </li>
+      <li class="nav-item">
+        <a routerLinkActive="active" routerLink="/post" class="nav-link"
+          >DemoPost</a
+        >
+      </li>
+      <li class="nav-item">
+        <a routerLinkActive="active" routerLink="/user" class="nav-link"
+          >User</a
+        >
+      </li>
+      <li class="nav-item">
+        <a routerLinkActive="active" routerLink="/fashion" class="nav-link"
+          >Fashion</a
+        >
+      </li>
     </ul>
   </nav>
 </header>
-<router-outlet></router-outlet> -->
+
+<router-outlet></router-outlet>
+
+<br />
+<br />
+<br />
+<!-- <div>
+  <div>
+    <div>
+      <h4>News Table</h4>
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th>Title</th>
+            <th>Type</th>
+            <th>Publisher</th>
+            <th>Link</th>
+
+            <th>Uuid</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let fin of finarray?.news">
+            <td>{{ fin.title }}</td>
+            <td>{{ fin.type }}</td>
+            <td>{{ fin.publisher }}</td>
+            <td>{{ fin.link }}</td>
+
+            <td>{{ fin.uuid }}</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <br />
+      <br />
+      <br />
+
+      <h4>Quotes Table</h4>
+      <table class="table table-dark">
+        <thead>
+          <tr>
+            <th>Industry</th>
+            <th>Symbol</th>
+
+            <th>Sector</th>
+            <th>ExchDisp</th>
+            <th>Score</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let fin of finarray?.quotes">
+            <td>{{ fin.industry }}</td>
+            <td>{{ fin.symbol }}</td>
+            <td>{{ fin.sector }}</td>
+            <td>{{ fin.exchDisp }}</td>
+            <td>{{ fin.score }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div> -->

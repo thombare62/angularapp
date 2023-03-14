@@ -4,6 +4,10 @@ import { AboutusComponent } from './aboutus/aboutus.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { DemopostComponent } from './demopost/demopost.component';
 import { DemopostdetailsComponent } from './demopostdetails/demopostdetails.component';
+import { FashionListComponent } from './fashion/fashion-list/fashion-list.component';
+import { KidsComponent } from './fashion/kids/kids.component';
+import { MenComponent } from './fashion/men/men.component';
+import { WomenComponent } from './fashion/women/women.component';
 import { HomeComponent } from './home/home.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { CameraComponent } from './product/camera/camera.component';
@@ -27,6 +31,15 @@ const routes: Routes = [
       {path : 'camera', component: CameraComponent},
       {path: 'watch', component: WatchComponent}
     ]},
+    {path:'fashion', component:  FashionListComponent,
+    children: [
+      {path :'men', component: MenComponent },
+      {path: 'women', component: WomenComponent},
+      {path: 'kids', component: KidsComponent}
+    ]
+
+
+    },
 
   {path: 'post', component : DemopostComponent},
   {path: 'postdetails/:id', component: DemopostdetailsComponent},

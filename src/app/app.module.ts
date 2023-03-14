@@ -41,6 +41,9 @@ import { Routingassign1Component } from './routingassign1/routingassign1.compone
 import { Routingassign2Component } from './routingassign2/routingassign2.component';
 import { HomeComponent } from './home/home.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { FashionModule } from './fashion/fashion.module';
+
+
 
 
 @NgModule({
@@ -86,6 +89,8 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
     
     
     
+    
+    
   ],
   imports: [
     BrowserModule,
@@ -105,7 +110,7 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
     MatButtonToggleModule,
     MatGridListModule,
     HttpClientModule,
-    
+    FashionModule,
     
     
   ],
