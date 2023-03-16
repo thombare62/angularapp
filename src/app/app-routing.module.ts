@@ -17,6 +17,7 @@ import { ProductComponent } from './product/product.component';
 import { WatchComponent } from './product/watch/watch.component';
 import { Routingassign1Component } from './routingassign1/routingassign1.component';
 import { Routingassign2Component } from './routingassign2/routingassign2.component';
+import { TodoComponent } from './todo/todo.component';
 
 
 const routes: Routes = [
@@ -40,7 +41,7 @@ const routes: Routes = [
 
 
     },
-
+  {path: 'todo', component: TodoComponent},
   {path: 'post', component : DemopostComponent},
   {path: 'postdetails/:id', component: DemopostdetailsComponent},
   {path: 'user', component: Routingassign1Component},

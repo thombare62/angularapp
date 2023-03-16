@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Employee } from './models/employee';
+
 import { RapidapiService } from './services/rapidapi.service';
 
 @Component({
@@ -11,6 +12,7 @@ export class AppComponent {
   display = [];
   
   finarray: any;
+  rapidArrayPr: any;
   sendToParent(receivedData : string | number){
     console.log(`received Data:`,receivedData);
     this.display.push(receivedData);
@@ -24,7 +26,7 @@ export class AppComponent {
   dept: 'IT'
   }
   empCount;
-  constructor( private rapidapiService : RapidapiService, ){
+  constructor( private rapidapiService : RapidapiService ){
     
   this.getValueFromServer();
   }
@@ -44,11 +46,12 @@ export class AppComponent {
     
   }
   ngOnInit(): void {
-    this.rapidapiService.getFinance().subscribe(res =>{
-      console.log('Rapid Response',res);
-      this.finarray=res;
-    });
-  }
+    
+    };
+
+
+    
+  
   
 
   }

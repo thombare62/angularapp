@@ -1,0 +1,14 @@
+.create{
+    border-radius: 5px;
+    margin-left: 20px;
+    margin-top: 20px;
+    color: rgb(120, 5, 97);
+    background-color: rgb(189, 244, 197);
+    margin-right: 10px;
+   box-shadow: 5px 5px rgb(82, 71, 71);
+}
+.input{
+    box-shadow: 6px 6px rgb(238, 230, 230);
+    border-radius: 5px;
+    margin-left: 10px;
+}

@@ -42,6 +42,8 @@ import { Routingassign2Component } from './routingassign2/routingassign2.compone
 import { HomeComponent } from './home/home.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { FashionModule } from './fashion/fashion.module';
+import { TodoComponent } from './todo/todo.component';
+
 
 
 
@@ -84,6 +86,8 @@ import { FashionModule } from './fashion/fashion.module';
     Routingassign2Component,
     HomeComponent,
     PagenotfoundComponent,
+    TodoComponent,
+    
     
     
     

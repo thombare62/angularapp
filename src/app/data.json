@@ -1,0 +1,24 @@
+{
+  "todos": [
+    {
+      "id": 1678956979112,
+      "title": "HTML"
+    },
+    {
+      "id": 1678956986783,
+      "title": "CSS"
+    },
+    {
+      "id": 1678956995988,
+      "title": "JavaScript"
+    },
+    {
+      "id": 1678957004590,
+      "title": "TypeScript"
+    },
+    {
+      "id": 1678957019215,
+      "title": "Angular"
+    }
+  ]
+}
