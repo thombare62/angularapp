@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AboutusComponent } from './aboutus/aboutus.component';
+import { AuthGuard } from './auth.guard';
 import { ContactusComponent } from './contactus/contactus.component';
 import { DemopostComponent } from './demopost/demopost.component';
 import { DemopostdetailsComponent } from './demopostdetails/demopostdetails.component';
@@ -9,6 +10,7 @@ import { KidsComponent } from './fashion/kids/kids.component';
 import { MenComponent } from './fashion/men/men.component';
 import { WomenComponent } from './fashion/women/women.component';
 import { HomeComponent } from './home/home.component';
+import { LoginformComponent } from './loginform/loginform.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { CameraComponent } from './product/camera/camera.component';
 import { LaptopComponent } from './product/laptop/laptop.component';
@@ -25,7 +27,7 @@ const routes: Routes = [
   {path: 'home', component: HomeComponent},
   { path: 'aboutus', component: AboutusComponent }, // http://localhost:4200/aboutus
   { path: 'contactus', component: ContactusComponent },
-  {path:'product', component:  ProductComponent,
+  {path:'product', canActivate: [AuthGuard], component:  ProductComponent,      //path:'product', canActivate: [AuthGuard], component:  ProductComponent,
     children: [
       {path :'laptop', component: LaptopComponent },
       {path : 'mobile', component: MobileComponent},
@@ -46,7 +48,8 @@ const routes: Routes = [
   {path: 'postdetails/:id', component: DemopostdetailsComponent},
   {path: 'user', component: Routingassign1Component},
   {path: 'userdetails/:id', component: Routingassign2Component},
-  {path : '**' , component: PagenotfoundComponent}
+  {path : '**' , component: PagenotfoundComponent},
+  {path : 'login' , component: LoginformComponent}
 ];
 
 @NgModule({

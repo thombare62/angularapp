@@ -1,0 +1,18 @@
+<br />
+<div>
+  <h1 class="head">Wikipedia Search API</h1>
+</div>
+<br />
+<div class="box" style="margin-left: 10px;">
+  <form (submit)="onFormSubmit($event)">
+    <input
+    
+      class="input input is-rounded"
+      type="text"
+      style="font-weight: bold;"
+      (input)="term = $event.target.value"
+      placeholder=" Input Search Here"
+    />
+    <button style="margin-left: 10px;" class="btn btn-info" (submit)="onFormSubmit($event)"> Click To Search</button>
+  </form>
+</div>

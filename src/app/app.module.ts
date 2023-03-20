@@ -43,6 +43,10 @@ import { HomeComponent } from './home/home.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { FashionModule } from './fashion/fashion.module';
 import { TodoComponent } from './todo/todo.component';
+import { LoginformComponent } from './loginform/loginform.component';
+import { HooksComponent } from './hooks/hooks.component';
+import { SearchBarComponent } from './search-bar/search-bar.component';
+import { PageListComponent } from './page-list/page-list.component';
 
 
 
@@ -87,6 +91,10 @@ import { TodoComponent } from './todo/todo.component';
     HomeComponent,
     PagenotfoundComponent,
     TodoComponent,
+    LoginformComponent,
+    HooksComponent,
+    SearchBarComponent,
+    PageListComponent,
     
     
     

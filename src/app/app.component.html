@@ -55,7 +55,7 @@
 <!-- <app-product></app-product> -->
 
 <header>
-  <nav>
+  <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
     <ul class="nav nav-tabs">
       <li class="nav-item">
         <a routerLinkActive="active" routerLink="/home" class="nav-link"
@@ -103,8 +103,8 @@
     </ul>
   </nav>
 </header>
+<!-- <app-loginform></app-loginform> -->
 
-<router-outlet></router-outlet>
 
 <br />
 <br />
@@ -164,4 +164,9 @@
       </table>
     </div>
   </div> -->
-  
+  <!-- <button class="btn btn-danger" (click)="changeFromParent()"> Change From Parent </button>
+  <br> <br> <br>
+  <app-hooks [parentData]="dataHook"></app-hooks> -->
+  <router-outlet></router-outlet>
+  <app-search-bar (submitted)="onTerm($event)"></app-search-bar>
+<app-page-list [pages]="pages" [isLoading]="isLoading"></app-page-list>
